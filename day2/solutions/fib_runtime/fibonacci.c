@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-fib_algorithm_t parse_algorithm(const char *algo_str) {
+Algorithm parse_algorithm(const char *algo_str) {
   if (strcmp(algo_str, "while") == 0)
     return WHILE;
   else if (strcmp(algo_str, "do") == 0)
@@ -96,7 +96,7 @@ void print_fibonacci_for(const int fib_max) {
   printf("\n");
 }
 
-void print_fibonacci(const int fib_max, const fib_algorithm_t algo) {
+void print_fibonacci(const int fib_max, const Algorithm algo) {
   switch (algo) {
     case WHILE:
       print_fibonacci_while(fib_max);

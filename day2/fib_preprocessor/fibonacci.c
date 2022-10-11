@@ -82,7 +82,7 @@ void print_fibonacci_for(const int fib_max) {
   printf("\n");
 }
 
-void print_fibonacci(int fib_max) {
+void print_fibonacci(const int fib_max) {
   // Use the preprocessor to select an algorithm.
 
   // WRITE YOUR CODE HERE
