@@ -2,19 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 
-Algorithm parse_algorithm(const char *algo_str) {
-  if (strcmp(algo_str, "while") == 0)
-    return WHILE;
-  else if (strcmp(algo_str, "do") == 0)
-    return DO;
-  else if (strcmp(algo_str, "for") == 0)
-    return FOR;
-  else if (strcmp(algo_str, "recursive") == 0)
-    return RECURSIVE;
-  else
-    return FIB_UNKNOWN;
-}
-
 void print_fibonacci_recursive(
     const int fib_max,
     const int prev,
@@ -85,7 +72,8 @@ void print_fibonacci_for(const int fib_max) {
   // Calculate and print the rest of the sequence
   // Note the use of commas to declare multiple variables in the declaration
   // section of the for loop, and to perform multiple operations in the
-  // increment step
+  // increment step. This is not the most readable way to write this code,
+  // but serves as an example of what can be done.
   for (
     int current = 1, prev = 1, next;
     current <= fib_max;
@@ -94,6 +82,21 @@ void print_fibonacci_for(const int fib_max) {
     printf(" %i", current);
   }
   printf("\n");
+}
+
+/* ------------------------------------- */
+
+Algorithm parse_algorithm(const char *algo_str) {
+  if (strcmp(algo_str, "while") == 0)
+    return WHILE;
+  else if (strcmp(algo_str, "do") == 0)
+    return DO;
+  else if (strcmp(algo_str, "for") == 0)
+    return FOR;
+  else if (strcmp(algo_str, "recursive") == 0)
+    return RECURSIVE;
+  else
+    return FIB_UNKNOWN;
 }
 
 void print_fibonacci(const int fib_max, const Algorithm algo) {
@@ -114,3 +117,5 @@ void print_fibonacci(const int fib_max, const Algorithm algo) {
       printf("ERROR: unknown algorithm\n");
   }
 }
+
+/* ------------------------------------- */
