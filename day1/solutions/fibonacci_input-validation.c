@@ -25,6 +25,6 @@ int main(int argc, char* argv[]) {
 
 
   int fib_max = atoi(argv[1]);
-  printf("Input was: %d\n", fib_max);
+  printf("Input was: %i\n", fib_max);
   return 0;
 }

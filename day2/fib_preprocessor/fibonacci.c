@@ -71,7 +71,8 @@ void print_fibonacci_for(const int fib_max) {
   // Calculate and print the rest of the sequence
   // Note the use of commas to declare multiple variables in the declaration
   // section of the for loop, and to perform multiple operations in the
-  // increment step
+  // increment step. This is not the most readable way to write this code,
+  // but serves as an example of what can be done.
   for (
     int current = 1, prev = 1, next;
     current <= fib_max;
@@ -82,8 +83,12 @@ void print_fibonacci_for(const int fib_max) {
   printf("\n");
 }
 
-void print_fibonacci(int fib_max) {
-  // Use the preprocessor to select an algorithm.
+void print_fibonacci(const int fib_max) {
+  /* --------------------------------------------------
+     TODO: Use the preprocessor to select an algorithm.
+  -------------------------------------------------- */
 
   // WRITE YOUR CODE HERE
+
+  /* ----------------------------------------------- */
 }

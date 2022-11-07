@@ -35,7 +35,6 @@ int main(int argc, char* argv[]) {
     printf("ERROR: expected one input argument\n");
     return 1;
   }
-  int blah[argc];
   if (!valid_input(argv[1])) {
     printf("ERROR: invalid input!\n");
     return 2;
